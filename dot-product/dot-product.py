@@ -9,4 +9,8 @@ def dot_product(x, y):
     x = np.array(x)
     y = np.array(y)
 
-    return np.dot(x, y)
+    if x.shape[0] != y.shape[0]:
+        raise ValueError()
+
+    # return np.dot(x, y)
+    return sum(a*b for a, b in zip(x, y))
