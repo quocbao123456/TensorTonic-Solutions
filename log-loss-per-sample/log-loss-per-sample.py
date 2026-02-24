@@ -6,4 +6,4 @@ def log_loss(y_true, y_pred, eps=1e-15):
 
     p = np.clip(y_pred, eps, 1 - eps)
 
-    return (-y_true*np.log(p) - (1-y_true)*np.log1p(-p)).tolist()
+    return (-y_true*np.log(p) - (1-y_true)*np.log(1-p)).tolist()
