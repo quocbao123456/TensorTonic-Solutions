@@ -7,5 +7,4 @@ def matrix_trace(A):
     A = np.array(A)
     
     # return np.sum(np.diag(A))
-
     return sum(A[i, i] for i in range(A.shape[0]))
