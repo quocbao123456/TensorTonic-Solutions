@@ -9,7 +9,7 @@ def k_means_assignment(points, centroids):
     result = np.zeros(len(points), dtype=int)
 
     for index, point in enumerate(points):
-        distances = np.linalg.norm(centroids - point, axis=1)
+        distances = np.sum((centroids - point)**2, axis=1)
 
         result[index] = np.argmin(distances)
     
